@@ -25,6 +25,7 @@
             </tree>
         </field>
     </record>
+
     <record id="hello_world_action" model="ir.actions.act_window">
         <field name="name">Hello World Action</field>
         <field name="res_model">hello.world.model</field>
@@ -32,6 +33,7 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
+
     <menuitem
         id="hello_world_root_menu"
         name="Hello World Menu"
