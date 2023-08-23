@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="my_first_app_view_form" model="ir.ui.view">
+        <field name="name">hello.world.view.form</field>
+        <field name="model">hello.world.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_hello_world_01" string="Hello World - Generic Form">
+                        <field name="field_type_char"/>
+                        <field name="field_type_text"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="my_first_app_view_tree" model="ir.ui.view">
+        <field name="name">hello.world.view.tree</field>
+        <field name="model">hello.world.model</field>
+        <field name="arch" type="xml">
+            <tree string="Hello World Tree">
+                <field name="id"/>
+                <field name="field_type_char"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hello_world_action" model="ir.actions.act_window">
+        <field name="name">Hello World Action</field>
+        <field name="res_model">hello.world.model</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    <menuitem
+        id="hello_world_root_menu"
+        name="Hello World Menu"
+        sequence="10"
+        action="hello_world_action">
+    </menuitem>
+</odoo>
