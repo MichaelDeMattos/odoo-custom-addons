@@ -10,5 +10,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/hello_world_views.xml',
+    ],
+    'depends': [
+        'sale'
     ]
 }
