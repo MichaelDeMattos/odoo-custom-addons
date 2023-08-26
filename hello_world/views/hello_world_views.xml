@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+        <record id="my_first_app_view_search" model="ir.ui.view">
+        <field name="name">hello.world.view.search</field>
+        <field name="model">hello.world.model</field>
+        <field name="arch" type="xml">
+            <search string="View search - Hello World">
+                <field name="field_type_char"/>
+                <field name="field_type_text"/>
+
+                <filter
+                    name="filter_type_char"
+                    string="chat 2"
+                    domain="[('field_type_char', '=', 'char 2')]"/>
+
+                <group expand="1" string="Group by">
+                    <filter
+                        string="char 2"
+                        name="field_type_char"
+                        context="{'group_by':'field_type_char','field_type_char':'char 2'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
     <record id="my_first_app_view_form" model="ir.ui.view">
         <field name="name">hello.world.view.form</field>
         <field name="model">hello.world.model</field>
